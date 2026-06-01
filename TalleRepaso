@@ -1,0 +1,194 @@
+using System;
+using System.Linq;
+
+namespace TallerArreglosBucles
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int op;
+
+            do
+            {
+                Console.Clear();
+
+                Console.WriteLine("===== MENU DE EJERCICIOS =====");
+                Console.WriteLine("1. Registro de Temperaturas");
+                Console.WriteLine("2. Secuencia Fibonacci");
+                Console.WriteLine("3. Inicialización Alternativa");
+                Console.WriteLine("4. Promedio de Calificaciones");
+                Console.WriteLine("5. Buscador de Valores");
+                Console.WriteLine("6. Ranking de Ventas");
+                Console.WriteLine("7. Estadísticas Rápidas");
+                Console.WriteLine("8. Filtro de Inventario");
+                Console.WriteLine("9. Inversión de Arreglo");
+                Console.WriteLine("10. Verificación de Aprobados");
+                Console.WriteLine("11. Tablas de Multiplicar");
+                Console.WriteLine("12. Dibujo de Patrones");
+                Console.WriteLine("13. Comparación de Arreglos");
+                Console.WriteLine("14. Identificación de Duplicados");
+                Console.WriteLine("15. Matriz de Identidad");
+                Console.WriteLine("16. Registro de Asistencia");
+                Console.WriteLine("17. Tabla de Precios");
+                Console.WriteLine("18. Suma de Filas");
+                Console.WriteLine("19. Mapa de Coordenadas");
+                Console.WriteLine("20. Análisis de Ventas Mensuales");
+                Console.WriteLine("0. Salir");
+                Console.Write("\nSeleccione una opción: ");
+
+                op = Convert.ToInt32(Console.ReadLine());
+
+                Console.Clear();
+
+                switch (op)
+                {
+                    case 1: Ejercicio1(); break;
+                    case 2: Ejercicio2(); break;
+                    case 3: Ejercicio3(); break;
+                    case 4: Ejercicio4(); break;
+                    case 5: Ejercicio5(); break;
+                    case 6: Ejercicio6(); break;
+                    case 7: Ejercicio7(); break;
+                    case 8: Ejercicio8(); break;
+                    case 9: Ejercicio9(); break;
+                    case 10: Ejercicio10(); break;
+                    case 11: Ejercicio11(); break;
+                    case 12: Ejercicio12(); break;
+                    case 13: Ejercicio13(); break;
+                    case 14: Ejercicio14(); break;
+                    case 15: Ejercicio15(); break;
+                    case 16: Ejercicio16(); break;
+                    case 17: Ejercicio17(); break;
+                    case 18: Ejercicio18(); break;
+                    case 19: Ejercicio19(); break;
+                    case 20: Ejercicio20(); break;
+                }
+
+                if (op != 0)
+                {
+                    Console.WriteLine("\nPresione una tecla para continuar...");
+                    Console.ReadKey();
+                }
+
+            } while (op != 0);
+        }
+
+       
+        // EJERCICIO 1
+        static void Ejercicio1()
+        {
+            // Arreglo de temperaturas de la semana
+            int[] temp = { 20, 22, 24, 23, 21, 19, 18 };
+
+            // Modificar el tercer día (índice 2)
+            temp[2] = 25;
+
+            Console.WriteLine("Temperatura actualizada del tercer día: " + temp[2]);
+        }
+
+        // ==========================
+        // EJERCICIO 2
+        // ==========================
+        static void Ejercicio2()
+        {
+            int[] fib = new int[10];
+
+            fib[0] = 0;
+            fib[1] = 1;
+
+            for (int i = 2; i < fib.Length; i++)
+            {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+
+            foreach (int n in fib)
+            {
+                Console.Write(n + " ");
+            }
+        }
+
+        // ==========================
+        // EJERCICIO 3
+        // ==========================
+        static void Ejercicio3()
+        {
+            string[] ciudades =
+            {
+                "Bogotá",
+                "Medellín",
+                "Cali",
+                "Barranquilla",
+                "Cartagena"
+            };
+
+            Console.WriteLine("Cantidad de ciudades: " + ciudades.Length);
+        }
+
+        // ==========================
+        // EJERCICIO 4
+        // ==========================
+        static void Ejercicio4()
+        {
+            double[] notas = { 4.5, 3.8, 5.0, 4.2, 3.6 };
+
+            double suma = 0;
+
+            foreach (double n in notas)
+            {
+                suma += n;
+            }
+
+            double prom = suma / notas.Length;
+
+            Console.WriteLine("Promedio: " + prom);
+        }
+
+        // ==========================
+        // EJERCICIO 5
+        // ==========================
+        static void Ejercicio5()
+        {
+            int[] nums = { 10, 20, 30, 40, 50 };
+
+            Console.Write("Ingrese número: ");
+            int buscar = Convert.ToInt32(Console.ReadLine());
+
+            bool encontrado = false;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == buscar)
+                {
+                    Console.WriteLine("Encontrado en índice: " + i);
+                    encontrado = true;
+                }
+            }
+
+            if (!encontrado)
+            {
+                Console.WriteLine("No existe.");
+            }
+        }
+
+        // ==========================
+        // EJERCICIOS 6 AL 20
+        // ==========================
+
+        static void Ejercicio6() { }
+        static void Ejercicio7() { }
+        static void Ejercicio8() { }
+        static void Ejercicio9() { }
+        static void Ejercicio10() { }
+        static void Ejercicio11() { }
+        static void Ejercicio12() { }
+        static void Ejercicio13() { }
+        static void Ejercicio14() { }
+        static void Ejercicio15() { }
+        static void Ejercicio16() { }
+        static void Ejercicio17() { }
+        static void Ejercicio18() { }
+        static void Ejercicio19() { }
+        static void Ejercicio20() { }
+    }
+}
